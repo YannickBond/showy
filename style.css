@@ -1,0 +1,282 @@
+body
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+min-height: 100vh;
+overflow: hidden;
+}
+h1
+{
+	font-family: courier;
+	font-size: 27px;
+	padding-left: 5px;
+}
+h2
+{
+	background-color: lightgrey;
+}
+h3
+{
+	background-color: lightgrey;
+}
+h4
+{
+	background-color: lightgrey;
+}
+.main_centre p
+{
+	background-color: lightgrey;
+}
+header
+{
+	display: flex;
+	background-color: white;
+	width: max-widt;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid lightgrey;
+	position: sticky;
+	top:0;
+}
+.logo
+{
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	flex : 2;
+}
+.header_centre
+{
+	display: flex;
+	flex: 10 ;
+	justify-content: center;
+}
+.recherche
+{
+	display: flex;
+	outline: none;
+	background-image: url('images/loupe.png');
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position: 15px center;
+	padding-left: 45px;
+	height: 33px;
+	width: 500px;
+	border-radius: 17px;
+	border: 1px solid lightgrey;
+}
+.compte_utilisateur
+{
+	display: flex;
+	align-items: center;
+	flex: 2;
+}
+.nom_user
+{
+	font-family: courier;
+	font-size: 15px;
+	padding-left: 5px;
+}
+.main
+{
+	display: flex;
+	height: 100vh;
+}
+.bloc_left
+{
+		display: flex;
+		border-right: 1px solid lightgrey;
+		flex-direction: column;
+		width: 13%;
+}
+.horizontal_gauche
+{
+			height: 6%;
+			display: flex;
+			border-bottom: 1px solid lightgrey;
+			align-items: center;
+}
+.liste_horizontal
+{
+		display:flex;
+		list-style-type: none;
+		padding-left: 0px;
+		justify-content: center;
+		align-items: center;
+}
+.liste_action
+{
+	flex: 1;
+}
+.liste_action img
+{
+		width: 55%;
+}
+.action_png
+{
+	align-items: center;
+	justify-content: center;
+}
+.vertical_gauche
+{
+	display: flex;
+	flex-direction: column;
+}
+.menu_gauche
+{
+	padding-left: 0px;
+	margin: 0px;
+}
+.liste_repertoire
+{
+	display: flex;
+	font-size: 12px;
+	padding-left: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid lightgrey;
+	border-right: 5px solid #6dbac4;
+	list-style-type: none;
+	font-family: courier;
+}
+a
+{
+	display: flex;
+	flex:9;
+	text-decoration: none;
+	color: black;
+}
+.main_centre
+{
+	width: 74%;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 25px;
+	overflow: scroll;
+	padding-bottom: 200px;
+}
+.infos_BudgetAnneeAgence
+{
+	display:flex;
+}
+.infos_BudgetAnneeAgence h4
+{
+	flex:1;
+}
+.Description
+{
+	border-bottom: 1px solid black;
+}
+.action
+{
+	display: flex;
+	flex-direction: column;
+	border-left: 1px solid lightgrey;
+	width: 13%;
+	padding-top: 20px;
+
+}
+.action input
+{
+	background-color: #6dbac4;
+	border-radius: 14px;
+	border: 1px solid #6dbac4;
+	text-align: center;
+	margin: 10px;
+	font-size: 12px;
+	padding: 8px;
+}
+.form_creation
+{
+	display: flex;
+	flex-direction: column;
+}
+.ligne_form
+{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+.ligne
+{
+	display: flex;
+}
+.main_centre input
+{
+	border-radius: 10px;
+	height:30px;
+	border: 1px solid #6dbac4;
+	padding-left: 10px;
+}
+
+.tableau
+{
+	width: 100%;
+	text-align: center;
+}
+
+thead th:nth-child(1) {
+  width: 20%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 20%;
+}
+
+thead th:nth-child(4) {
+  width: 20%;
+}
+
+th td
+{
+	padding: 5px;
+}
+td
+{
+	font-size: 12px;
+	height: 20px;
+}
+th
+{
+	background:#6dbac4;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+textarea
+{
+	border-radius: 10px;
+	height:40px;
+	border: 1px solid #6dbac4;
+	padding-left: 10px;
+	height: 100px;
+	resize: none;
+}
+.Description_longue
+{
+	height: 200px;
+}
+label
+{
+	margin-bottom: 2px;
+}
+select
+{
+	border-radius: 10px;
+	height: 30px;
+	border: 1px solid #6dbac4;
+	padding-left: 10px;
+	resize: none;
+}

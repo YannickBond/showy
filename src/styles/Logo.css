@@ -1,0 +1,20 @@
+h1
+{
+	font-family: lobster;
+	font-size: 27px;
+	padding-left: 5px;
+}
+.logo
+{
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	flex : 2;
+}
+a
+{
+	display: flex;
+	flex:9;
+	text-decoration: none;
+	color: black;
+}
