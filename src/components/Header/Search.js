@@ -1,4 +1,4 @@
-import '../styles/Search.css'
+import './Header.css'
 
 function Search() {
     return (

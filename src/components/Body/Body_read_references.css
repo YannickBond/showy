@@ -1,0 +1,52 @@
+.conteneur_body {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+  flex-wrap: nowrap;
+}
+.Body_read_references {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #e5ebeb;
+}
+.top_array_references {
+  display: flex;
+  margin: 15px;
+  height: 10%;
+  width: 90%;
+}
+.top_array_type_vue {
+  display: flex;
+}
+.liste_type_vue {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+}
+.top_array_action_vue {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.liste_action_vue {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15%;
+}
+
+li {
+  margin: 5px;
+}
+
+.array_references {
+  display: flex;
+  background-color: grey;
+  width: 90%;
+  height: 500px;
+  margin: 10px;
+}
