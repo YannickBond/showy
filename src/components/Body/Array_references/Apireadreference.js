@@ -1,8 +1,4 @@
-
-import Arrayreference from './Arrayreference'
-
-function Apireadreference(e) {
-    e.preventDefault();
+function Apireadreference() {
     const url = 'https://showy.hasura.app/api/rest/addref';  
     let arrayreference = [];
     let fetchData = {
@@ -22,9 +18,8 @@ function Apireadreference(e) {
              }
         })
         .then(function (value) {
-            return <Arrayreference props = {value} />
+            return 
         })
     )
 }
-
 export default Apireadreference
