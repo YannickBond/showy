@@ -1,17 +1,20 @@
 import MaterialTable from 'material-table'
-import '../Body_read_references.css'
 import { useEffect, useState } from 'react'
-import Apireadreference from './Apireadreference'
+import Apireadallreferences from '../../../Services/ApiReadAllReference'
 
-function Array_references() {
-    
+function TableReferences() {
+
     const [allreferences, setAllreferences] = useState([]);
+    const fetchData = async () => {
+        const data = await Apireadallreferences()
+        setAllreferences(data)
+    }
     useEffect(() => {
-        setAllreferences(Apireadreference)
-         }, []);
+        fetchData()
+    }, []);
 
     const columns=[
-        {title:'Nom du Client',field:'NomduClient'},
+        {title:'Nom du Client',field:'Nomduclient'},
         {title:'Titre de la référence',field:'Titredelareference'},
         {title:'Budget',field:'Budget'},
         {title:'Année',field:'Annee'},
@@ -20,10 +23,18 @@ function Array_references() {
         {title:'Technologie',field:'Technologie'},
         {title:'Statut',field:'Statut'}, ]
     
-    const tabledata= [ allreferences.map((resuslt) =>
-    {NomduClient: resuslt.refCompany, Titredelareference: resuslt.refTitle, Budget: resuslt.refBudget, Annee: resuslt.refDate, Entite: resuslt.speEntityCompany, Typedemission: resuslt.speTypeMission, Technologie: result.speTechnology, Statut: resuslt.statut })
-]
-
+    const tabledata = (allreferences?.account_reference || []).map(
+        reference => ({
+            Nomduclient: reference.refCompany, 
+            Titredelareference: reference.refTitle, 
+            Budget: reference.refBudget, 
+            Annee: reference.refDate, 
+            Entite: reference.speEntityCompany, 
+            Typedemission: reference.speTypemission, 
+            Technologie: reference.speTechnology, 
+            Statut: reference.statut 
+        })
+    )
  
   return (
          <MaterialTable 
@@ -43,4 +54,4 @@ function Array_references() {
     )
 }
 
-export default Array_references
+export default TableReferences

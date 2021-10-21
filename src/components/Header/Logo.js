@@ -1,11 +1,23 @@
-import './Header.css'
-import cleverage from '../../assets/cleverage.png'
+import wikitlogo from '../../assets/logowikit.png'
+import styled from 'styled-components'
+
+const HeaderLogoSociete = styled.span`
+display: flex;
+align-items: center;
+padding-left: 30px;
+min-height: 50px;
+flex: 2;
+background-color: white;
+`
+const HeaderLogoimg = styled.img`
+height:15px;
+`
 
 function Logo() {
     return (
-        <span className="logo">
-            <img src={cleverage} height="30px" />
-        </span>
+        <HeaderLogoSociete>
+            <HeaderLogoimg src={wikitlogo}  alt='Logo de la société Wikit'/>
+        </HeaderLogoSociete>
     )
 }
 
