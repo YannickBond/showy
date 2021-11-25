@@ -1,9 +1,9 @@
-import TableReferences from './TableReferences';
-import FilterByStatusReferences from './FilterByStatusReferences';
+import TableCatalogue from './TableCatalogue'
+import FilterByTypeCatalogue from './FilterByTypeCatalogue'
 import styled from 'styled-components';
 import TopReadToolBar from '../TopReadToolbar';
 
-function ReadAllReferences() {
+function Catalogue() {
 
 const DivAddPage = styled.div`
 display: flex;
@@ -22,7 +22,7 @@ align-items:center;
 const DivConteneurTable = styled.div`
 display: flex;
 margin-top:20px;
-width: 92%;
+width: 90%;
 align-items:center;
 justify-content:center;
 `
@@ -57,11 +57,11 @@ font-size:12px;
     return (
         <DivAddPage>
             <DivReadRef>
-                   <TopReadToolBar >
-                        <FilterByStatusReferences/>
+                    <TopReadToolBar >
+                        <FilterByTypeCatalogue/>
                     </TopReadToolBar>
                 <DivConteneurTable>
-                    <TableReferences/>
+                    <TableCatalogue/>
                 </DivConteneurTable>
             </DivReadRef>
             <DivRightSection> 
@@ -72,4 +72,4 @@ font-size:12px;
     )
 }
 
-export default ReadAllReferences
+export default Catalogue

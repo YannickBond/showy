@@ -1,8 +1,14 @@
-import Header from '../components/Header/Header'
+import Header from '../components/Header/Header';
 import Leftsidebar from '../components/Left-SideBar/Leftsidebar';
 import ReadAllReferences from '../components/Body/ReadAllReferences/ReadAllReferences'
-import Error from '../components/Body/Error';
+import AddReference from '../components/Body/AddReference/AddReference';
+import Catalogue from '../components/Body/Catalogue/Catalogue';
+import TemplateReference from '../components/Body/Reference/TemplateReference'
 import Box from '@mui/material/Box';
+import Parameters from '../components/Body/Parameters/Parameters';
+import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import theme from '../Services/Theme';
 import {
   HashRouter as Router,
   Switch,
@@ -12,17 +18,21 @@ import {
 
 function App() {
 
+/* Conteneur de la page */
+const DivPage = styled.div`
+  display: flex;
+  height: calc(100vh - 50px);
+  width: 100%;
+  align-items:center;
+  background-color : ${props => props.theme.background};
+  `
+
   return (
+    <ThemeProvider theme={theme}>
     <Router>
           <Header />
-
-          <Box sx={{width: '100%', height: 'calc(100vh - 50px)',  display: 'flex'}}>
-            
-            <Box sx={{width: '4%',  display: 'flex'}}>
-              <Leftsidebar />
-            </Box>
-
-          <Box sx={{width: '100%',height:'100%', padding:'2%', display: 'flex', justifyContent:'center'}}>  
+          <DivPage>
+            <Leftsidebar />
           
             <Switch>
            
@@ -31,28 +41,26 @@ function App() {
               </Route>
 
               <Route path="/addreferences">
-              <Box sx={{width: '85%',height:'85%', bgcolor: 'text.disabled', borderRadius: '10px',  display: 'flex'}} />
+                <AddReference />
               </Route>
 
               <Route path="/catalogue">
-              <Box sx={{width: '85%',height:'85%', bgcolor: 'text.disabled', borderRadius: '10px',  display: 'flex'}} />
+                <Catalogue />
               </Route>
 
               <Route path="/parameters">
-              <Box sx={{width: '85%',height:'85%', bgcolor: 'text.disabled', borderRadius: '10px',  display: 'flex'}} />
+                <Parameters />
               </Route>
 
               <Route>
-              <Box sx={{width: '85%',height:'85%', bgcolor: 'text.disabled', borderRadius: '10px',  display: 'flex'}} >
-                <Error />
-              </Box>
+                <TemplateReference/>
               </Route>
           
             </Switch>
 
-            </Box>
-            </Box>
+            </DivPage>
     </Router>
+  </ThemeProvider>
   )
 }
 

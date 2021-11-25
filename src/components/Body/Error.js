@@ -1,3 +1,4 @@
+/* Page 404 */
 function Error() {
     return (
         <div>
