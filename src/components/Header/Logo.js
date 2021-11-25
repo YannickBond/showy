@@ -1,4 +1,3 @@
-import wikitlogo from '../../assets/logowikit.png'
 import styled from 'styled-components'
 
 const HeaderLogoSociete = styled.span`
@@ -8,15 +7,15 @@ padding-left: 30px;
 min-height: 50px;
 flex: 2;
 background-color: white;
-`
-const HeaderLogoimg = styled.img`
-height:15px;
+font:bold;
+font-size:25px;
+font-family:'Roboto':
 `
 
 function Logo() {
     return (
         <HeaderLogoSociete>
-            <HeaderLogoimg src={wikitlogo}  alt='Logo de la société Wikit'/>
+            Wikit
         </HeaderLogoSociete>
     )
 }

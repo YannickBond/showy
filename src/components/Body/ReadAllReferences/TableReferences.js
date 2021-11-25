@@ -14,14 +14,14 @@ function TableReferences() {
     }, []);
 
     const columns=[
-        {title:'Nom du Client',field:'Nomduclient'},
+        {title:'Nom du Client',field:'Nomduclient',width:'80'},
         {title:'Titre de la référence',field:'Titredelareference'},
-        {title:'Budget',field:'Budget'},
+        {title:'Budget',field:'Budget',width:'40'},
         {title:'Année',field:'Annee'},
         {title:'Entité',field:'Entite'},
-        {title:'Type de mission',field:'Typedemission'},
-        {title:'Technologie',field:'Technologie'},
-        {title:'Statut',field:'Statut'}, ]
+        {title:'Type de mission',field:'Typedemission',width:'40'},
+        {title:'Technologie',field:'Technologie', width:'40'},
+        {title:'Statut',field:'Statut', width:'40'} ]
     
     const tabledata = (allreferences?.account_reference || []).map(
         reference => ({
@@ -39,16 +39,15 @@ function TableReferences() {
   return (
          <MaterialTable 
             columns={columns} 
-            data={tabledata} 
+            data={tabledata}
             options={{ 
                 paging: false, 
                 search: false, 
                 showTitle: false, 
                 toolbar:false,
                 displayheader:false, 
-                headerStyle: { background:"#178C9A",fontSize:10, color:'white'},
-                rowStyle: {fontSize:10},
-                width:1,
+                headerStyle: { background:"#EB7046",fontSize:11, color:'white', borderBlock:'10px'},
+                rowStyle: {fontSize:10}
         }}  />
            
     )

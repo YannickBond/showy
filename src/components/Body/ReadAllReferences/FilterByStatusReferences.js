@@ -3,17 +3,12 @@ import Stack from '@mui/material/Stack';
 
 function FilterByStatusReferences() {
 
-const handleClick = () => {
-    console.info('You clicked the Chip.');
-  };
-  const handleDelete = () => {
-    console.info('You clicked the delete icon.');
-  };
+
     return (
-    <Stack direction="row" spacing={1}>
-      <Chip label="All" onClick={handleClick} />
-      <Chip label="En cours" onClick={handleClick} />
-      <Chip label="En validation" onClick={handleClick} />
+    <Stack direction="row" spacing={2}>
+      <Chip size="small" label="All" sx={{fontSize:10, fontWeight:'bold', minWidth:100, backgroundColor:"#EB7046", color:'white'}}  />
+      <Chip size="small" label="En cours" sx={{fontSize:10, fontWeight:'bold', minWidth:100, backgroundColor:"#3E3D40", color:'white'}}  />
+      <Chip size="small" label="En validation" sx={{fontSize:10, fontWeight:'bold', minWidth:100, backgroundColor:"#3E3D40", color:'white'}} />
     </Stack>
     )
 }
